@@ -1,3 +1,4 @@
+#pragma once
 #include <cpprest/http_client.h>
 #include <cpprest/filestream.h>
 #include <cpprest/json.h>
@@ -13,8 +14,7 @@ using namespace concurrency::streams;       // Asynchronous streams
 
 using namespace std;
 
+json::value get_trade_info(string const & SearchTerm); //ping Quadriga and get the trade info
 
-void print_result(json::value const & value);
-
-void get_price_Q(string const & SearchTerm);
+json::value get_order_book(string const & SearchTerm);
 
