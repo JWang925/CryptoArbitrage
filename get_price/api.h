@@ -1,4 +1,5 @@
-#pragma once
+#ifndef api_h
+#define api_h
 #include <cpprest/http_client.h>
 #include <cpprest/filestream.h>
 #include <cpprest/json.h>
@@ -17,4 +18,10 @@ using namespace std;
 json::value get_trade_info(string const & SearchTerm); //ping Quadriga and get the trade info
 
 json::value get_order_book(string const & SearchTerm);
+
+void print_trade_info(json::value trade_info);
+
+void print_order_book(json::value order_book);
+
+#endif
 
