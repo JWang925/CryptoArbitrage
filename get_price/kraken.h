@@ -24,6 +24,12 @@ class Kraken
 public:
 json::value get_order_book(string const & SearchTerm); //get detailed order book
 
+void print_order_book(json::value order_book); // print order book
+
+double get_ask(json::value order_book); //get lowest ask price from order book
+
+double get_bid(json::value order_book); //get highest bid price from order book
+
 };
 
 
