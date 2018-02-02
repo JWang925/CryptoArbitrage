@@ -16,7 +16,26 @@ int main(int argc, char* argv[])
 
 	//cout << "margin of EqBqCqE is (without fee):" << EqBqCqE() << "%" << endl;
 
-	cout << "margin of EqBtBkE is (without fee):" << EqBtBkE() << "%" << endl;
+	//cout << "margin of EqBtBkE is (without fee):" << EqBtBkE() << "%" << endl;
+
+	Quadriga q;
+	Kraken k;
+
+	cout << "ETH****************************"<<endl;
+
+	q.print_order_book(q.get_order_book("eth_cad"));
+
+	k.print_order_book(k.get_order_book("ETHCAD"));
+	k.print_order_book(k.get_order_book("ETHUSD"));
+
+
+
+	cout << "BTC****************************"<<endl;
+	q.print_order_book(q.get_order_book("btc_cad"));
+
+
+	k.print_order_book(k.get_order_book("XBTCAD"));
+	k.print_order_book(k.get_order_book("XBTUSD"));
 
 
 

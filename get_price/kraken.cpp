@@ -1,8 +1,6 @@
 #include "kraken.h"
 #include <iomanip>
 
-
-
 json::value Kraken::get_order_book(string const & SearchTerm){
 	// Create http_client to send the request.
 	http_client client(U("https://api.kraken.com/0/public/")); //construct an instance of http_client for quadriga.
@@ -36,7 +34,7 @@ void Kraken::print_order_book(json::value order_book){
 	}
 	if(!order_book.is_null()){
 		cout << "Kraken market-----------------------" << endl;
-		cout << "number of trade pairs:" <<order_book.at("result").size() <<endl;
+		//cout << "number of trade pairs:" <<order_book.at("result").size() <<endl;
 
 		json::object result = order_book.at("result").as_object();
 		for (auto iter = result.cbegin(); iter != result.cend(); ++iter){
@@ -45,9 +43,8 @@ void Kraken::print_order_book(json::value order_book){
 			auto bids = iter->second.at("bids");
 			cout<< setw(30) << "lowerest ask/quantity:" << setw(30) << "highest bid/quantity:" <<endl;
 			cout<< setw(30) << asks.at(0) << setw(30) << bids.at(0) <<endl;
-			cout<< setw(30) << asks.at(1) << setw(30) << bids.at(1) <<endl;
-			cout<< setw(30) << asks.at(2) << setw(30) << bids.at(2) <<endl;
-			cout << "------------------------------------" <<endl;
+			//cout<< setw(30) << asks.at(1) << setw(30) << bids.at(1) <<endl;
+			//cout<< setw(30) << asks.at(2) << setw(30) << bids.at(2) <<endl;
 		}
 	}
 }

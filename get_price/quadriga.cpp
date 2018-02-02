@@ -74,13 +74,11 @@ void Quadriga::print_order_book(json::value order_book){
 		auto asks = order_book.at("asks");
 		auto bids = order_book.at("bids");
 		
-		cout << "Quadriga Exchange --------------------" <<endl;
-		cout << "timestamp:" << order_book.at("timestamp") <<endl;
+		cout << "Quadriga Exchange:" << "timestamp:" << order_book.at("timestamp") <<endl;
 		cout<< setw(30) << "lowerest ask/quantity:" << setw(30) << "highest bid/quantity:" <<endl;
 		cout<< setw(30) << asks.at(0) << setw(30) << bids.at(0) <<endl;
-		cout<< setw(30) << asks.at(1) << setw(30) << bids.at(1) <<endl;
-		cout<< setw(30) << asks.at(2) << setw(30) << bids.at(2) <<endl;
-		cout << "--------------------------------------" <<endl;
+		//cout<< setw(30) << asks.at(1) << setw(30) << bids.at(1) <<endl;
+		//cout<< setw(30) << asks.at(2) << setw(30) << bids.at(2) <<endl;
 	} 
 }
 
