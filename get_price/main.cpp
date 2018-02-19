@@ -28,12 +28,10 @@ int main(int argc, char* argv[])
 	ofstream outfile;
 	outfile.open("result.txt",std::fstream::out | std::fstream::app );
 
-	while (1) {
-		outfile << std::time(0) << '\t';
-		outfile << EqBtBkE() << "%" << '\t';
-		outfile << BqEtEkB() << "%" <<endl;
-		std::this_thread::sleep_for (std::chrono::seconds(5));
-	}
+	outfile << std::time(0) << '\t';
+	outfile << EqBtBkE() << "%" << '\t';
+	outfile << BqEtEkB() << "%" <<endl;
+	//std::this_thread::sleep_for (std::chrono::seconds(5));
 
 //	Kraken k;
 //	json::value order_book = k.get_order_book("ethcad");
